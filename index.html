@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>React Hello World</title>
+		<link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!--
+    Assuming you install React with Bower, you include React,
+    then the JSXTransformer which turns JSX into JavaScript 
+    and then your React code.
+    
+    In production, you'll want to not use the JSXTransformer
+    and should instead look at using something like Gulp, Grunt or
+    WebPack to compile JSX into JavaScript. Also, check out:
+    http://facebook.github.io/react/docs/tooling-integration.html
+    -->
+		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="http://fb.me/react-0.12.2.min.js"></script>
+    <script src="http://fb.me/JSXTransformer-0.12.2.js"></script>
+		<script src="main.js"></script>
+    
+    <!--
+    This is where you link to your React code. Can be .js or .jsx 
+    extension, doesn't really matter.
+    -->
+    <script type="text/jsx">
+			var ProductItem = React.createClass({
+				render: function () {
+					return (
+						<tr data-path={this.props.path} className='player'>
+						  <td>{this.props.name}</td>
+						  <td>{this.props.price}</td>
+						</tr>
+					);
+				}
+			});
+
+			var ProductsList = React.createClass({
+				render: function () {
+					var products = this.props.products.map(function (product, index) {
+						return <ProductItem
+						    key={index}
+						    name={product.name}
+						    price={product.price}
+								path={product.path}  />;
+					});
+
+					return (
+						<table>
+						  {products}
+						</table>
+					);
+				}
+			});
+
+			// Could come from an API, LocalStorage, another component, etc...
+			var products = [
+				{ name: 'Toast', price: 1499, path: 'http://e2.365dm.com/15/10/16-9/20/neymar-barcelona-football_3360103.jpg?20151006124610' },
+				{ name: 'Bacon', price: 3245, path: 'test.html' },
+				{ name: 'Coffee', price: 300, path: 'test.html' }
+			];
+
+			React.render(<ProductsList products={products} />, document.body, 
+				function () {
+					$(".player").each(function(index) {
+						$(this).load($(this).attr("data-path"));
+					});
+				}				
+			);
+		</script>
+  </body>
+</html>
