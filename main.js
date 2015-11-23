@@ -27,7 +27,7 @@ var players = {
 function bindClick() {
 	$('.flipCap').one('click', function() {
 		$(this).parent().parent().toggleClass('clicked');
-		setTimeout(bindClick, 100);
+		setTimeout(bindClick, 1);
 	});
 }
 
@@ -52,7 +52,7 @@ $(document).ready(function() {
 		);
 
     Tipped.create(this, $(selector)[0]);
-
-		bindClick();
 	});
+
+	bindClick();
 });
