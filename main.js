@@ -41,6 +41,9 @@ $(document).ready(function() {
 			}				
 		);
 
-    Tipped.create(this, $(selector)[0]);
+    Tipped.create(this, $(selector)[0], {
+		  width:200px;
+		  height:140px;
+		});
 	});
 });
