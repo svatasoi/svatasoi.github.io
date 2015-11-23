@@ -28,7 +28,8 @@ $(document).ready(function() {
 		var player = players[playerName];
 		alert(player.front);
 
-		React.render(<Player name={player.name} back={player.back} front={player.front} />, $(this).find("span"), 
+		React.render(<Player name={player.name} back={player.back} front={player.front} />, 
+			$(this).find("span").get(0), 
 			function () {
 				$(".load").css( "border", "3px solid red" );
 				
