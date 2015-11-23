@@ -29,6 +29,6 @@ React.render(comp, document.body,
 		
 		$(".player").each(function(index) {
 			$(this).load($(this).attr("data-path"));
-		});
+		}); 
 	}				
 );
