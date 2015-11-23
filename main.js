@@ -24,6 +24,13 @@ var players = {
 	"Isco": {name: "Isco", front: "Isco_front2.html", back: "Isco_back.html"}
 };
 
+function bindClick() {
+	$('.flipCap').on('click', function() {
+		$(this).parent().parent().toggleClass('clicked');
+		setTimeout(bindClick, 10);
+	});
+}
+
 $(document).ready(function() {
 	$(".player").each(function(index) {
 		var playerName = $(this).attr("data-player-name");
@@ -46,11 +53,6 @@ $(document).ready(function() {
 
     Tipped.create(this, $(selector)[0]);
 
-
-		$('.flipCap').on('click', function(event) {
-			event.stopPropagation();
-			event.preventDefault();
-			$(this).parent().parent().toggleClass('clicked');
-		});
+		bindClick();
 	});
 });
