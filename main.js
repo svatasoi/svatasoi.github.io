@@ -4,8 +4,8 @@ var Player = React.createClass({
 		return (
 			<div className="container">
 			  <div className="card">
-			    <div data-path={this.props.name} className='player face front'></div>
-			    <div data-path={this.props.name} className="player face back">
+			    <div data-path={this.props.front} className='player face front'></div>
+			    <div data-path={this.props.back} className="player face back">
 					  <p>{this.props.name}</p>
 			    </div>
 			  </div>
@@ -19,11 +19,11 @@ var players = {
 	"Iniesta": {front: "test.html", back: "test.html"}
 };
 
-// var neymar = {name: "Neymar", front: "test.html", back: "test.html"};
+var neymar = {name: "Neymar", front: "test.html", back: "test.html"};
 
-var neymar = { name: 'Toast', price: 1499 };
+var comp = <Player name={neymar.name} back={neymar.back} front={neymar.front} />
 
-React.render(<Player player={neymar} />, document.body, 
+React.render(comp, document.body, 
 	function () {
 		$(".player").css( "border", "3px solid red" );
 		/*
