@@ -4,8 +4,8 @@ var Player = React.createClass({
 		return (
 			<div className="container">
 			  <div className="card">
-			    <div data-path={this.props.front} className='player face front'></div>
-			    <div data-path={this.props.back} className="player face back">
+			    <div data-path={this.props.front} className='load face front'></div>
+			    <div data-path={this.props.back} className="load face back">
 					  <p>{this.props.name}</p>
 			    </div>
 			  </div>
@@ -21,14 +21,19 @@ var players = {
 
 var neymar = {name: "Neymar", front: "test.html", back: "test.html"};
 
-var comp = <Player name={neymar.name} back={neymar.back} front={neymar.front} />
+$(document).ready(function() {
+	$(".player").each(function(elt, index) {
+		var playerName = $(this).attr("data-player-name");
+		var player = players[playerName];
 
-React.render(comp, document.body, 
-	function () {
-		$(".player").css( "border", "3px solid red" );
-		
-		$(".player").each(function(index) {
-			$(this).load($(this).attr("data-path"));
-		}); 
-	}				
-);
+		React.render(<Player name={player.name} back={player.back} front={player.front} />, $(this), 
+			function () {
+				$(".load").css( "border", "3px solid red" );
+				
+				$(".load").each(function(index) {
+					$(this).load($(this).attr("data-path"));
+				}); 
+			}				
+		);
+	});
+});
