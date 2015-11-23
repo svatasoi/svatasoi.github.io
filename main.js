@@ -26,7 +26,7 @@ $(document).ready(function() {
 		// add tooltip to body (div.id=playerName-index)
 		var tooltipID = playerName + index;
     var selector = '#' + tooltipID;
-		$("body").append("<div id='"+tooltipID+"' width='200px' style='display:none'></div>");
+		$("body").append("<div id='"+tooltipID+"' style='width:200px;display:none'></div>");
 
 		var player = players[playerName];
 
@@ -42,8 +42,7 @@ $(document).ready(function() {
 		);
 
     Tipped.create(this, $(selector)[0], {
-		  width:200px;
-		  height:140px;
+		  maxWidth:200;
 		});
 	});
 });
