@@ -22,7 +22,6 @@ var players = {
 $(document).ready(function() {
 	$(".player").each(function(index) {
 		var playerName = $(this).attr("data-player-name");
-		alert(playerName);
 
 		// add tooltip to body (div.id=playerName-index)
 		var tooltipID = playerName + index;
