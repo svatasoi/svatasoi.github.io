@@ -1,12 +1,12 @@
 .container{
-  width:200px;
-  height:140px;
+  width:320px;
+  height:200px;
   position: relative;
 }
 
 .t_Tooltip {
-  width:200px;
-  height:140px;
+  width:320px;
+  height:200px;
 }
 
 .card{
