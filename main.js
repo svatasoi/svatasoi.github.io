@@ -22,8 +22,9 @@ var players = {
 var neymar = {name: "Neymar", front: "test.html", back: "test.html"};
 
 $(document).ready(function() {
-	$(".player").each(function(elt, index) {
+	$(".player").each(function(index) {
 		var playerName = $(this).attr("data-player-name");
+		alert(playerName);
 		var player = players[playerName];
 
 		React.render(<Player name={player.name} back={player.back} front={player.front} />, $(this), 
