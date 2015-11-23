@@ -26,6 +26,7 @@ $(document).ready(function() {
 		var playerName = $(this).attr("data-player-name");
 		alert(playerName);
 		var player = players[playerName];
+		alert(player.front);
 
 		React.render(<Player name={player.name} back={player.back} front={player.front} />, $(this), 
 			function () {
