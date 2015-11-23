@@ -28,7 +28,16 @@
     <script type="text/jsx">
 			var Player = React.createClass({
 				render: function () {
-					return <div>{this.props}</div>;
+					return (
+						<div className="container">
+						  <div className="card">
+						    <div data-path={this.props.front} className='player face front'></div>
+						    <div data-path={this.props.back} className="player face back">
+								  <p>{this.props.name}</p>
+						    </div>
+						  </div>
+						</div>
+					);
 				}
 			});
 
