@@ -25,11 +25,14 @@ $(document).ready(function() {
 	$(".player").each(function(index) {
 		var playerName = $(this).attr("data-player-name");
 		alert(playerName);
-		var player = players[playerName];
-		alert(player.front);
+
+		// add tooltip to body (div.id=playerName-index)
+		var tooltipID = playerName + index;
+    var selector = '#' + tooltipID;
+		$("body").append("<div id='"+tooltipID+"' style='display:none'></div>");
 
 		React.render(<Player name={player.name} back={player.back} front={player.front} />, 
-			$(this).find("span").get(0), 
+			$(selector), 
 			function () {
 				$(".load").css( "border", "3px solid red" );
 				
@@ -38,5 +41,7 @@ $(document).ready(function() {
 				}); 
 			}				
 		);
+
+    Tipped.create(this, $(selector)[0]);
 	});
 });
