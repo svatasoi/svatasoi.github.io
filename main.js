@@ -31,6 +31,8 @@ $(document).ready(function() {
     var selector = '#' + tooltipID;
 		$("body").append("<div id='"+tooltipID+"' style='display:none'></div>");
 
+		var player = players[playerName];
+
 		React.render(<Player name={player.name} back={player.back} front={player.front} />, 
 			$(selector), 
 			function () {
