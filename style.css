@@ -22,16 +22,14 @@
   height: 100%;
 }
 .face.front{
-	background:#333;
 }
 
 .face.back {
   display: block;
   box-sizing: border-box;
-  padding: 20px;
+  padding: 5px;
   color: white;
   text-align: left;
-  background-color: #333;
 }
 
 .container{
