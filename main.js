@@ -32,9 +32,7 @@ $(document).ready(function() {
 
 		React.render(<Player name={player.name} back={player.back} front={player.front} />, 
 			$(selector).get(0), 
-			function () {
-				$(".load").css( "border", "3px solid red" );
-				
+			function () {				
 				$(".load").each(function(index) {
 					$(this).load($(this).attr("data-path"));
 				}); 
