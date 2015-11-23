@@ -47,7 +47,9 @@ $(document).ready(function() {
     Tipped.create(this, $(selector)[0]);
 
 
-		$('.flipCap').on('click', function() {
+		$('.flipCap').on('click', function(event) {
+			event.stopPropagation();
+			event.preventDefault();
 			$(this).parent().parent().toggleClass('clicked');
 		});
 	});
