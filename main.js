@@ -25,9 +25,9 @@ var players = {
 };
 
 function bindClick() {
-	$('.flipCap').on('click', function() {
+	$('.flipCap').one('click', function() {
 		$(this).parent().parent().toggleClass('clicked');
-		setTimeout(bindClick, 10);
+		setTimeout(bindClick, 100);
 	});
 }
 
