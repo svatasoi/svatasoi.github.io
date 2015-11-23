@@ -9,8 +9,9 @@ var Player = React.createClass({
 			    	<a className='flipCap'>(more info...)</a>
 			    </div>
 
-			    <div data-path={this.props.back} className="load face back">
-					  <p>{this.props.name}</p>
+			    <div className='face back'>
+			    	<div data-path={this.props.back} className="load"></div>
+			    	<a className='flipCap'>(more info...)</a>
 			    </div>
 			  </div>
 			</div>
