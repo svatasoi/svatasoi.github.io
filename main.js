@@ -6,7 +6,7 @@ var Player = React.createClass({
 			  <div className="card">
 			    <div className='face front'>
 			    	<div data-path={this.props.front} className='load'></div>
-			    	<a class='flipCap'>(more info...)</a>
+			    	<a className='flipCap'>(more info...)</a>
 			    </div>
 
 			    <div data-path={this.props.back} className="load face back">
