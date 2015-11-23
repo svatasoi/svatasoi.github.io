@@ -34,7 +34,7 @@ $(document).ready(function() {
 		var player = players[playerName];
 
 		React.render(<Player name={player.name} back={player.back} front={player.front} />, 
-			$(selector), 
+			$(selector).get(0), 
 			function () {
 				$(".load").css( "border", "3px solid red" );
 				
