@@ -11,7 +11,7 @@ var Player = React.createClass({
 
 			    <div className='face back'>
 			    	<div data-path={this.props.back} className="load"></div>
-			    	<a className='flipCap'>(more info...)</a>
+			    	<a className='flipCap'>(less info...)</a>
 			    </div>
 			  </div>
 			</div>
