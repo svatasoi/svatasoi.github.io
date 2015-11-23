@@ -26,10 +26,10 @@
     extension, doesn't really matter.
     -->
     <script type="text/jsx">
-			var ProductItem = React.createClass({
+			var Player = React.createClass({
 				render: function () {
 					return (
-						<tr className="container">
+						<div className="container">
 						  <div className="card">
 						    <div data-path={this.props.path} className='player face front'></div>
 						    <div className="face back">
@@ -37,37 +37,17 @@
 								  <p>{this.props.price}</p>
 						    </div>
 						  </div>
-						</tr>
+						</div>
 					);
 				}
 			});
 
-			var ProductsList = React.createClass({
-				render: function () {
-					var products = this.props.products.map(function (product, index) {
-						return <ProductItem
-						    key={index}
-						    name={product.name}
-						    price={product.price}
-								path={product.path}  />;
-					});
+			var players = {
+				"Neymar": {front: "test.html", back: "test.html"}, 
+				"Iniesta": {front: "test.html", back: "test.html"}
+			};
 
-					return (
-						<table>
-						  {products}
-						</table>
-					);
-				}
-			});
-
-			// Could come from an API, LocalStorage, another component, etc...
-			var products = [
-				{ name: 'Toast', price: 1499, path: 'test.html' },
-				{ name: 'Bacon', price: 3245, path: 'test.html' },
-				{ name: 'Coffee', price: 300, path: 'test.html' }
-			];
-
-			React.render(<ProductsList products={products} />, document.body, 
+			React.render(<Player player={players["Neymar"]} />, document.body, 
 				function () {
 					$(".player").each(function(index) {
 						$(this).load($(this).attr("data-path"));
