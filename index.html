@@ -29,9 +29,14 @@
 			var ProductItem = React.createClass({
 				render: function () {
 					return (
-						<tr data-path={this.props.path} className='player'>
-						  <td>{this.props.name}</td>
-						  <td>{this.props.price}</td>
+						<tr class="container">
+						  <div class="card">
+						    <div data-path={this.props.path} className='player' class="face front"></div>
+						    <div class="face back">
+								  <p>{this.props.name}</p>
+								  <p>{this.props.price}</p>
+						    </div>
+						  </div>
 						</tr>
 					);
 				}
