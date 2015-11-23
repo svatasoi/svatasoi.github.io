@@ -40,14 +40,12 @@
   transition: all 1.0s linear;
 }
 .card:hover {
-  transform: rotateY(180deg);
 }
 .face {
   backface-visibility: hidden;
 }
 
 .face.back {
-  transform: rotateY(180deg);
 }
 
 
