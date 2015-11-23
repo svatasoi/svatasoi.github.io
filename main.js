@@ -20,7 +20,7 @@ var Player = React.createClass({
 });
 
 var players = {
-	"Neymar": {name: "Neymar", front: "test.html", back: "test.html"}, 
+	"Neymar": {name: "Neymar", front: "neymar_front.html", back: "neymar_back.html"}, 
 	"Isco": {name: "Isco", front: "Isco_front2.html", back: "Isco_back.html"}
 };
 
