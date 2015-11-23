@@ -42,7 +42,7 @@ $(document).ready(function() {
 		);
 
     Tipped.create(this, $(selector)[0], {
-		  maxWidth:200;
+		  maxWidth:200
 		});
 	});
 });
