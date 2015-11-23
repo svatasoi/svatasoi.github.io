@@ -4,7 +4,11 @@ var Player = React.createClass({
 		return (
 			<div className="container">
 			  <div className="card">
-			    <div data-path={this.props.front} className='load face front'></div>
+			    <div className='face front'>
+			    	<div data-path={this.props.front} className='load'></div>
+			    	<a class='flipCap'>(more info...)</a>
+			    </div>
+
 			    <div data-path={this.props.back} className="load face back">
 					  <p>{this.props.name}</p>
 			    </div>
@@ -41,7 +45,7 @@ $(document).ready(function() {
 
     Tipped.create(this, $(selector)[0]);
 
-    
+
 		$('.flipCap').on('click', function() {
 			$(this).toggleClass('clicked');
 		});
