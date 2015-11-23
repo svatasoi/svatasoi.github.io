@@ -30,7 +30,7 @@
 }
 
 .container{
-  perspective: 800px;
+  perspective: 200px;
 }
 .card{
   transform-style: preserve-3d;
