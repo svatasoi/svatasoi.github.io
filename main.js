@@ -19,7 +19,9 @@ var players = {
 	"Iniesta": {front: "test.html", back: "test.html"}
 };
 
-React.render(<Player player={players["Neymar"]} />, document.body, 
+var neymar = {name: "Neymar", front: "test.html", back: "test.html"};
+
+React.render(<Player player={neymar} />, document.body, 
 	function () {
 		$(".player").css( "border", "3px solid red" );
 		/*
