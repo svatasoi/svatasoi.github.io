@@ -7,13 +7,13 @@
 .card{
   text-align:center;
   position: absolute;
-  width: 50%;
+  width: 100%;
   height: 100%;
 }
 
 .face {
   position: absolute;
-  width: 50%;
+  width: 100%;
   height: 100%;
 }
 .face.front{
@@ -54,8 +54,7 @@
     position: relative;
     /*  DO NOT include below two lines, as they were added so that the text that
         is hovered over is offset from top of page*/
-    top: 10em;
-    left: 10em;
+    
     /* if want hover over icon instead of text based, uncomment below */
         /*    background-image: url("../images/info_tooltip.svg");
             /!* width and height of svg *!/
