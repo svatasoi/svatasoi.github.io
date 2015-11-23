@@ -41,4 +41,7 @@ $(document).ready(function() {
 
     Tipped.create(this, $(selector)[0]);
 	});
+	$('.flipCap').on('click', function() {
+    $(this).toggleClass('clicked');
+});
 });

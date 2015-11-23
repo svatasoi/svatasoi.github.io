@@ -39,7 +39,7 @@
   transform-style: preserve-3d;
   transition: all 1.0s linear;
 }
-.card:hover {
+.card:hover, .clicked {
   transform: rotateY(180deg);
 }
 .face {
