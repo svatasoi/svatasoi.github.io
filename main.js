@@ -47,7 +47,7 @@ $(document).ready(function() {
 
 
 		$('.flipCap').on('click', function() {
-			$(this).toggleClass('clicked');
+			$(this).parent().parent().toggleClass('clicked');
 		});
 	});
 });
