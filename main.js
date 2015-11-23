@@ -26,10 +26,9 @@ var comp = <Player name={neymar.name} back={neymar.back} front={neymar.front} />
 React.render(comp, document.body, 
 	function () {
 		$(".player").css( "border", "3px solid red" );
-		/*
+		
 		$(".player").each(function(index) {
 			$(this).load($(this).attr("data-path"));
 		});
-		*/
 	}				
 );
